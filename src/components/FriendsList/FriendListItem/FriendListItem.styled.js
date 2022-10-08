@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 
-export const FriendsList = styled.ul`
-  display: flex;
-  flex-direction: column;
-
-  margin-bottom: 50px;
-`;
-
-export const Friend = styled.li`
+export const FriendItem = styled.li`
   width: 200px;
   padding: 10px;
   border: 2px solid grey;

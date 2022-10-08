@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { StatisticsWrap, StatisticsTitle } from './Statistics.styled';
-import { StatisticsInform } from '../StatisticsInform/StatisticsInform';
+import { StatisticsInform } from './StatisticsInform/StatisticsInform';
 
 export const Statistics = ({ title, data }) => {
   return (

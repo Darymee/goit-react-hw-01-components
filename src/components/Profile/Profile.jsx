@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { ProfileWrap } from './Profile.styled';
-import { Description } from 'components/Task1/Description/Description';
-import { Stats } from 'components/Task1/Stats/Stats';
+import { Description } from 'components/Profile/Description/Description';
+import { Stats } from 'components/Profile/Stats/Stats';
 
 export const Profile = ({ user }) => {
   const { username, tag, location, avatar, stats } = user;
