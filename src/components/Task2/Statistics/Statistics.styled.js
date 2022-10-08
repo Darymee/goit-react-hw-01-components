@@ -10,7 +10,11 @@ export const StatisticsWrap = styled.section`
   align-items: center;
   border: 2px solid grey;
   padding-top: 15px;
-  box-shadow: 6px 11px 36px 1px rgba(0, 0, 0, 0.39);
+  &:hover,
+  &:focus {
+    box-shadow: 6px 11px 36px 1px rgba(0, 0, 0, 0.39);
+    cursor: pointer;
+  }
 `;
 
 export const StatisticsTitle = styled.h2`
