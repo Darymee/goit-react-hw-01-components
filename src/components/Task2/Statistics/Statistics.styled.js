@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const StatisticsWrap = styled.section`
   display: flex;
   flex-direction: column;
+
+  margin-bottom: 50px;
+
   width: 400px;
   align-items: center;
   border: 2px solid grey;
