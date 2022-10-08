@@ -17,6 +17,11 @@ export const Friend = styled.li`
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: #b4e1f7;
+  }
 `;
 
 export const Status = styled.span`
