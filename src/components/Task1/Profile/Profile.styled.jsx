@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ProfileWrap = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
   width: 250px;
   flex-wrap: wrap;
   border: 2px solid grey;

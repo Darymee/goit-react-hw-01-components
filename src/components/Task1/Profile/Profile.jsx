@@ -6,7 +6,7 @@ import { Stats } from 'components/Task1/Stats/Stats';
 export const Profile = ({ user }) => {
   const { username, tag, location, avatar, stats } = user;
   return (
-    <ProfileWrap>
+    <ProfileWrap id={tag}>
       <Description
         username={username}
         tag={tag}
@@ -19,17 +19,11 @@ export const Profile = ({ user }) => {
 };
 
 Profile.propTypes = {
-  user: PropTypes.objectOf(
-    PropTypes.shape({
-      username: PropTypes.string.isRequired,
-      tag: PropTypes.string.isRequired,
-      location: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      stats: PropTypes.exact({
-        followers: PropTypes.number.isRequired,
-        views: PropTypes.number.isRequired,
-        likes: PropTypes.number.isRequired,
-      }),
-    })
-  ),
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.object.isRequired,
+  }),
 };

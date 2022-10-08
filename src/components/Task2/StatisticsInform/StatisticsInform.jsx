@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   StatisticsList,
   StatisticsItem,
@@ -6,24 +7,24 @@ import {
 } from './StatisticsInform.styled';
 
 export const StatisticsInform = ({ data }) => {
-  data.map(info => (
+  return (
     <StatisticsList>
-      <StatisticsItem>
-        <StatisticsLabel>{info.label}</StatisticsLabel>
-        <StatisticsPercentage>{info.percentage}</StatisticsPercentage>
-      </StatisticsItem>
-      <StatisticsItem>
-        <StatisticsLabel>{info.label}</StatisticsLabel>
-        <StatisticsPercentage>{info.percentage}</StatisticsPercentage>
-      </StatisticsItem>
-      <StatisticsItem>
-        <StatisticsLabel>{info.label}</StatisticsLabel>
-        <StatisticsPercentage>{info.percentage}</StatisticsPercentage>
-      </StatisticsItem>
-      <StatisticsItem>
-        <StatisticsLabel>{info.label}</StatisticsLabel>
-        <StatisticsPercentage>{info.percentage}</StatisticsPercentage>
-      </StatisticsItem>
+      {data.map(info => (
+        <StatisticsItem key={info.id}>
+          <StatisticsLabel>{info.label}</StatisticsLabel>
+          <StatisticsPercentage>{info.percentage}%</StatisticsPercentage>
+        </StatisticsItem>
+      ))}
     </StatisticsList>
-  ));
+  );
+};
+
+StatisticsList.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };

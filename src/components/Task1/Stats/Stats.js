@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   StatsList,
   StatsItem,
@@ -25,4 +26,12 @@ export const Stats = ({ stats }) => {
       </StatsItem>
     </StatsList>
   );
+};
+
+Stats.propTypes = {
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
