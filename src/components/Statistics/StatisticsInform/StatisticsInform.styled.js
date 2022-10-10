@@ -9,7 +9,7 @@ export const StatisticsList = styled.ul`
 
 export const StatisticsItem = styled.li`
   padding: 15px 0;
-  width: calc(100% / 4);
+  width: calc(100% / 5);
   display: flex;
   flex-direction: column;
   justify-content: center;
